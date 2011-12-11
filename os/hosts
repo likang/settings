@@ -1,0 +1,18 @@
+# google search
+203.208.46.146 encrypted.google.com  www.google.com
+203.208.46.146 encrypted-tbn0.google.com encrypted-tbn1.google.com encrypted-tbn2.google.com encrypted-tbn3.google.com
+203.208.46.146 ssl.gstatic.com
+203.208.46.146 clients1.google.com clients2.google.com clients3.google.com clients4.google.com
+# google map
+203.208.46.146 maps.google.com
+203.208.46.146 maps.gstatic.com
+203.208.46.146 mt0.google.com mt1.google.com mt2.google.com mt3.google.com
+# google mail
+203.208.46.146 mail.google.com
+203.208.46.146 accounts.google.com
+# google news
+203.208.46.146 news.google.com
+203.208.46.146 www.gstatic.com
+# google image
+203.208.46.146 t0.gstatic.com t1.gstatic.com t2.gstatic.com t3.gstatic.com
+
