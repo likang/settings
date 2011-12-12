@@ -1,0 +1,1 @@
+search_engine=https://encrypted.google.com/search?hl=zh_CN&q=%s
