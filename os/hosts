@@ -15,4 +15,6 @@
 203.208.46.146 www.gstatic.com
 # google image
 203.208.46.146 t0.gstatic.com t1.gstatic.com t2.gstatic.com t3.gstatic.com
+# google plusone
+203.208.46.146 plusone.google.com
 
