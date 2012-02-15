@@ -1,0 +1,8 @@
+syntax on
+filetype indent on
+set hlsearch
+set et
+set sta
+set sw=4
+set ts=4
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
