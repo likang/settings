@@ -20,17 +20,47 @@ set autochdir   " 自动切换当前目录为当前文件所在的目录
 set nocompatible    " 关闭vi兼容模式
 set backspace=indent,eol,start  " 针对vi,使其正常使用Backspace键和上下左右键
 
+" 列宽超过120时给予错误提示
 match ErrorMsg /\%>120v.\+/
-"列宽超过120时给予错误提示
 
-filetype plugin indent on "开启文件类型自动识别，启用文件类型插件，启用针对文件类型的自动缩进
+set foldmethod=syntax   " 按语法高亮元素折叠
+set foldlevel=99        " 默认不折叠
+
+filetype plugin indent on " 开启文件类型自动识别，启用文件类型插件，启用针对文件类型的自动缩进
 
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 "文件编码猜测
 
-set statusline=\ %<%F%=[%1*%M%*%n%R%H]\ %y\ %0(%l/%L:%c%)\ 
 " 设置状态栏显示内容
+set statusline=\ %<%F%=[%1*%M%*%n%R%H]\ %y\ %0(%l/%L:%c%)\ 
+
 "set laststatus=2    "显示状态栏，默认为1
 
 " Language - Python
-autocmd FileType python map <f12> :!python %<cr>
+autocmd FileType python map <f8> :!python %<cr>
+
+let g:acp_completeoptPreview = 1
+
+
+" Supertab settings
+" supertab + eclim == java win
+"let g:SuperTabDefaultCompletionTypeDiscovery = [
+"\ "&completefunc:<c-x><c-u>",
+"\ "&omnifunc:<c-x><c-o>",
+"\ ]
+let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabLongestHighlight = 1
+
+" Eclim settings
+" ,i imports whatever is needed for current line
+nnoremap <silent> <LocalLeader>i :JavaImport<cr>
+" ,d opens javadoc for statement in browser
+nnoremap <silent> <LocalLeader>d :JavaDocSearch -x declarations<cr>
+" ,<enter> searches context for statement
+nnoremap <silent> <LocalLeader><cr> :JavaSearchContext<cr>
+" ,jv validates current java file
+nnoremap <silent> <LocalLeader>jv :Validate<cr>
+" ,jc shows corrections for the current line of java
+nnoremap <silent> <LocalLeader>jc :JavaCorrect<cr>
+" 'open' on OSX will open the url in the default browser without issue
+let g:EclimBrowser='open'
 
